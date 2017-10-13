@@ -17,26 +17,30 @@ class App extends Component {
   }
   render() {
     return (
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ height: '100vh' }}>
         <Sider
           trigger={null}
           collapsible
           collapsed={this.state.collapsed}
         >
           <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="user" />
-              <span>nav 1</span>
+              <Icon type="team" />
+              <span>Students</span>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="video-camera" />
-              <span>nav 2</span>
+              <Icon type="user" />
+              <span>Staff</span>
             </Menu.Item>
-            <Menu.Item key="3">
-              <Icon type="upload" />
-              <span>nav 3</span>
-            </Menu.Item>
+            <SubMenu
+              key="sub1"
+              title={<span><Icon type="book" /><span>Finance</span></span>}
+            >
+              <Menu.Item key="3">Account</Menu.Item>
+              <Menu.Item key="4">Salary</Menu.Item>
+              <Menu.Item key="5">Analysis</Menu.Item>
+            </SubMenu>
           </Menu>
         </Sider>
         <Layout>
