@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Sidebar from "./Component/sidebar";
-import ContentBody from "./Component/content";
 
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
