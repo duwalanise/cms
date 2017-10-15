@@ -1,3 +1,21 @@
 {
-  "students":[]
+  "students":[
+    {
+      "id": 0,
+      "key": 0,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/bluefx_/128.jpg",
+      "city": "Lake Zelda",
+      "email": "Lonny79@hotmail.com",
+      "firstName": "Emelia",
+      "lastName": "Gislason",
+      "street": "Kulas Shoals",
+      "zipCode": "52677",
+      "date": "2016-09-27T08:18:56.302Z",
+      "bs": "back-end optimize e-markets",
+      "catchPhrase": "Devolved heuristic focus group",
+      "companyName": "Kessler LLC",
+      "words": "dignissimos et natus",
+      "sentence": "Illum molestiae saepe eaque odit magnam veritatis eligendi est qui."
+    }
+  ]
 }

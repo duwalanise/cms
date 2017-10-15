@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-import Dashboard from './dashboard';
+import Dashboard from './Dashboard';
 import Student from './Student';
-import Staff from './dashboard';
-import Finance from './dashboard';
-import NotFound from './notfound';
+import Staff from './Staff';
+import Finance from './Finance';
+import NotFound from './Utility/notfound';
 
 export default () =>(
   <main>
