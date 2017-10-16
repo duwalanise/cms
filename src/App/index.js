@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Layout, Breadcrumb, Icon, Table } from 'antd';
+import { Layout, Icon } from 'antd';
 
 import SidebarMenu from './Component/SidebarMenu';
 import Main from './Component/main';
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 class App extends Component {
   state = {
