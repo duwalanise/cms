@@ -17,9 +17,12 @@ const OpenModal = ({ title, data, visible, handleSubmit, handleCancel }) => (
     onCancel={handleCancel}
     width={800}
   >
-    <StudentForm
-      onSubmit={handleSubmit}
-      initialValues={{...data, dob: getDate(data, 'dob'), joinedDate: getDate(data, 'joinedDate')}} />
+    { visible ?
+      <StudentForm
+        onSubmit={handleSubmit}
+        initialValues={{...data, dob: getDate(data, 'dob'), joinedDate: getDate(data, 'joinedDate')}} />
+        : null 
+    }
   </Modal>
 );
 

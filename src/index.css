@@ -17,3 +17,35 @@ body {
   padding: 21px;
   font-size: 20px;
 }
+
+input[type="file"].avatar-input {
+  display: none;
+}
+
+.avatar-label {
+  margin-top: 10px;
+  display: inline-block;
+  border: solid 2px #888;
+  padding: 2px 15px;
+  border-radius: 5px;
+  color: #888;
+}
+
+.avatar-label:hover {
+  color: #fff;
+  background: #888;
+}
+
+.profile-wrapper {
+  text-align: center;
+}
+
+.profile-image {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
