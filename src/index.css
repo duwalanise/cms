@@ -18,7 +18,7 @@ body {
   font-size: 20px;
 }
 
-input[type="file"].avatar-input {
+input[type='file'].avatar-input {
   display: none;
 }
 
@@ -48,4 +48,14 @@ input[type="file"].avatar-input {
   border-radius: 50%;
   background-position: center;
   background-size: cover;
+}
+
+.login-form {
+  max-width: 400px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
 }
