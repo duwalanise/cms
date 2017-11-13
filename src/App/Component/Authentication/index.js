@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Form, Icon, Input, Button, Checkbox, Card } from 'antd';
+import { userLogin } from './action';
 const FormItem = Form.Item;
 
 class NormalLoginForm extends React.Component {
@@ -7,7 +10,7 @@ class NormalLoginForm extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        this.props.userLogin(values);
       }
     });
   };
@@ -45,4 +48,6 @@ class NormalLoginForm extends React.Component {
   }
 }
 
-export default Form.create()(NormalLoginForm);
+export default connect(store => ({}), dispatch => bindActionCreators({ userLogin }, dispatch))(
+  Form.create()(NormalLoginForm)
+);
