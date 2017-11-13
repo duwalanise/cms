@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Layout, Icon } from 'antd';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import SidebarMenu from './Component/SidebarMenu';
 import NavHeader from './Component/NavHeader';
 import Main from './Component/main';
 import Login from './Component/Authentication';
+import { AuthenticationWrapper } from './Component/Authentication/authenticationWrapper';
 
 const { Header, Content, Sider } = Layout;
 
@@ -18,9 +20,6 @@ class App extends Component {
     });
   };
   render() {
-    if (!this.props.isAuthenticated) {
-      return <Login />;
-    }
     return (
       <Layout style={{ height: '100vh' }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -41,7 +40,9 @@ class App extends Component {
   }
 }
 
-export default connect(
-  store => ({ isAuthenticated: store.currentUser.isAuthenticated })
-  // dispatch => bindActionCreators({ fetchStaffList, addStaff, updateStaff, removeStaff }, dispatch)
-)(App);
+export default withRouter(
+  connect(
+    store => ({ isAuthenticated: store.currentUser.isAuthenticated })
+    // dispatch => bindActionCreators({ fetchStaffList, addStaff, updateStaff, removeStaff }, dispatch)
+  )(AuthenticationWrapper(App))
+);
